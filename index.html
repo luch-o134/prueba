@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entre las estrellas 🌟</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="estrellas"></div>
+  <div class="contenido">
+    <h1>✨ Eres una mujer bonita ✨</h1>
+    <p>usted me llamaba la atencion desde hace rato cuando la veia en la cancha jaja y le decidi hablarle y creo que fue bueno porque me gusto su forma de ser y los chistosa y alegre que a sido conmigo y bueno eso. jajaja</p>
+  </div>
+
+  <script>
+    function crearEstrella() {
+      const estrella = document.createElement('div');
+      estrella.classList.add('estrella');
+      estrella.style.left = Math.random() * 100 + 'vw';
+      estrella.style.animationDuration = (8 + Math.random() * 6) + 's';
+      estrella.innerHTML = Math.random() > 0.5 ? '✨' : '⭐';
+      document.body.appendChild(estrella);
+      setTimeout(() => { estrella.remove(); }, 12000);
+    }
+
+    function crearEstrellasEstaticas() {
+      for (let i = 0; i < 50; i++) {
+        const estrella = document.createElement('div');
+        estrella.classList.add('estrella-estatica');
+        estrella.style.left = Math.random() * 100 + 'vw';
+        estrella.style.top = Math.random() * 100 + 'vh';
+        estrella.style.animationDelay = Math.random() * 3 + 's';
+        document.querySelector('.estrellas').appendChild(estrella);
+      }
+    }
+
+    setInterval(crearEstrella, 500);
+    crearEstrellasEstaticas();
+  </script>
+</body>
+</html>
