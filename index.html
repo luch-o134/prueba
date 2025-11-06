@@ -1,42 +1,300 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Entre las estrellas 🌟</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Momentos 💕</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="estrellas"></div>
-  <div class="contenido">
-    <h1>✨ Eres una mujer bonita ✨</h1>
-    <p>usted me llamaba la atencion desde hace rato cuando la veia en la cancha jaja y le decidi hablarle y creo que fue bueno porque me gusto su forma de ser y los chistosa y alegre que a sido conmigo y bueno eso. jajaja</p>
-  </div>
+    <div class="album-container">
+        <header class="album-header">
+            <h1>💕 Nuestros Momentos Especiales 💕</h1>
+            <p>Un álbum lleno de amor y recuerdos increíbles</p>
+        </header>
 
-  <script>
-    function crearEstrella() {
-      const estrella = document.createElement('div');
-      estrella.classList.add('estrella');
-      estrella.style.left = Math.random() * 100 + 'vw';
-      estrella.style.animationDuration = (8 + Math.random() * 6) + 's';
-      estrella.innerHTML = Math.random() > 0.5 ? '✨' : '⭐';
-      document.body.appendChild(estrella);
-      setTimeout(() => { estrella.remove(); }, 12000);
-    }
+        <div class="album-grid">
+            <!-- Foto 1 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">📷</span>
+                        <span class="placeholder-text">Nuestra primera foto juntos</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 1">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
 
-    function crearEstrellasEstaticas() {
-      for (let i = 0; i < 50; i++) {
-        const estrella = document.createElement('div');
-        estrella.classList.add('estrella-estatica');
-        estrella.style.left = Math.random() * 100 + 'vw';
-        estrella.style.top = Math.random() * 100 + 'vh';
-        estrella.style.animationDelay = Math.random() * 3 + 's';
-        document.querySelector('.estrellas').appendChild(estrella);
-      }
-    }
+            <!-- Foto 2 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">💑</span>
+                        <span class="placeholder-text">Nuestra primera cita</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 2">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
 
-    setInterval(crearEstrella, 500);
-    crearEstrellasEstaticas();
-  </script>
+            <!-- Foto 3 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">🌹</span>
+                        <span class="placeholder-text">Un momento especial</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 3">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
+
+            <!-- Foto 4 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">🎉</span>
+                        <span class="placeholder-text">Celebrando juntos</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 4">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
+
+            <!-- Foto 5 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">🌅</span>
+                        <span class="placeholder-text">Un atardecer contigo</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 5">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
+
+            <!-- Foto 6 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">🏖️</span>
+                        <span class="placeholder-text">Aventura en la playa</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 6">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
+
+            <!-- Foto 7 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">🍕</span>
+                        <span class="placeholder-text">Cena romántica</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 7">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
+
+            <!-- Foto 8 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">🎈</span>
+                        <span class="placeholder-text">Tu cumpleaños</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 8">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
+
+            <!-- Foto 9 -->
+            <div class="photo-frame">
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">🌙</span>
+                        <span class="placeholder-text">Una noche perfecta</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Foto 9">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            </div>
+
+            <!-- Añadir más fotos -->
+            <div class="add-more-frame" onclick="addNewFrame()">
+                <div class="add-more-content">
+                    <span class="add-icon">➕</span>
+                    <span class="add-text">Agregar más fotos</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="love-message">
+            <h2>💌 Mensaje especial para ti</h2>
+            <textarea id="loveNote" placeholder="Escribe aquí un mensaje de amor para tu pareja..."></textarea>
+            <button onclick="saveLoveNote()" class="save-btn">💾 Guardar mensaje</button>
+        </div>
+    </div>
+
+    <!-- Input oculto para subir archivos -->
+    <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="handleFileSelect(event)">
+
+    <script>
+        let currentPhotoFrame = null;
+
+        function addPhoto(element) {
+            currentPhotoFrame = element;
+            document.getElementById('fileInput').click();
+        }
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file && currentPhotoFrame) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = currentPhotoFrame.querySelector('.photo-img');
+                    const placeholder = currentPhotoFrame.querySelector('.placeholder-content');
+                    
+                    img.src = e.target.result;
+                    img.style.display = 'block';
+                    placeholder.style.display = 'none';
+                    
+                    // Guardar en localStorage
+                    const frameIndex = Array.from(document.querySelectorAll('.photo-frame')).indexOf(currentPhotoFrame.parentElement);
+                    localStorage.setItem(`photo_${frameIndex}`, e.target.result);
+                    
+                    // Animación de corazones
+                    createHearts(currentPhotoFrame);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function addNewFrame() {
+            const albumGrid = document.querySelector('.album-grid');
+            const addMoreFrame = document.querySelector('.add-more-frame');
+            
+            const newFrame = document.createElement('div');
+            newFrame.className = 'photo-frame';
+            newFrame.innerHTML = `
+                <div class="photo-placeholder" onclick="addPhoto(this)">
+                    <div class="placeholder-content">
+                        <span class="add-icon">💕</span>
+                        <span class="placeholder-text">Nuevo recuerdo</span>
+                    </div>
+                    <img class="photo-img" style="display: none;" alt="Nueva foto">
+                </div>
+                <div class="photo-caption">
+                    <input type="text" placeholder="Escribe una dedicatoria..." class="caption-input">
+                </div>
+            `;
+            
+            albumGrid.insertBefore(newFrame, addMoreFrame);
+            
+            // Animación de entrada
+            newFrame.style.opacity = '0';
+            newFrame.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+                newFrame.style.transition = 'all 0.5s ease';
+                newFrame.style.opacity = '1';
+                newFrame.style.transform = 'scale(1)';
+            }, 100);
+        }
+
+        function saveLoveNote() {
+            const note = document.getElementById('loveNote').value;
+            if (note.trim()) {
+                localStorage.setItem('loveNote', note);
+                alert('💕 Mensaje guardado con amor!');
+                
+                // Efectos especiales
+                createHearts(document.querySelector('.love-message'));
+            }
+        }
+
+        function createHearts(element) {
+            for (let i = 0; i < 5; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement('div');
+                    heart.innerHTML = '💕';
+                    heart.className = 'floating-heart';
+                    heart.style.position = 'absolute';
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.fontSize = '20px';
+                    heart.style.pointerEvents = 'none';
+                    heart.style.zIndex = '1000';
+                    
+                    element.style.position = 'relative';
+                    element.appendChild(heart);
+                    
+                    // Animación
+                    heart.animate([
+                        { transform: 'translateY(0px)', opacity: 1 },
+                        { transform: 'translateY(-100px)', opacity: 0 }
+                    ], {
+                        duration: 2000,
+                        easing: 'ease-out'
+                    });
+                    
+                    setTimeout(() => heart.remove(), 2000);
+                }, i * 200);
+            }
+        }
+
+        // Guardar dedicatorias
+        document.addEventListener('input', function(e) {
+            if (e.target.classList.contains('caption-input')) {
+                const frameIndex = Array.from(document.querySelectorAll('.caption-input')).indexOf(e.target);
+                localStorage.setItem(`caption_${frameIndex}`, e.target.value);
+            }
+        });
+
+        // Cargar datos guardados al inicio
+        window.addEventListener('load', function() {
+            // Cargar fotos
+            document.querySelectorAll('.photo-frame').forEach((frame, index) => {
+                const savedPhoto = localStorage.getItem(`photo_${index}`);
+                if (savedPhoto) {
+                    const img = frame.querySelector('.photo-img');
+                    const placeholder = frame.querySelector('.placeholder-content');
+                    img.src = savedPhoto;
+                    img.style.display = 'block';
+                    placeholder.style.display = 'none';
+                }
+                
+                // Cargar dedicatorias
+                const savedCaption = localStorage.getItem(`caption_${index}`);
+                if (savedCaption) {
+                    frame.querySelector('.caption-input').value = savedCaption;
+                }
+            });
+            
+            // Cargar mensaje de amor
+            const savedNote = localStorage.getItem('loveNote');
+            if (savedNote) {
+                document.getElementById('loveNote').value = savedNote;
+            }
+        });
+    </script>
 </body>
 </html>
